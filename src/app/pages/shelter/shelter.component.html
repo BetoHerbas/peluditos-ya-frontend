@@ -1,0 +1,41 @@
+<div class="casas-hogar-container">
+    <!-- Banner -->
+    <div class="banner">
+        <h1><span class="black-text">Hogares </span> <span class="yellow-text">Registrados</span></h1>
+    </div>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-container">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar hogar..." />
+        <button>Buscar</button>
+    </div>
+
+    <div class="casas-grid">
+        <div *ngFor="let casa of getCasasFiltradas()" class="casa-card">
+            <div class="casa-img-container">
+                <img [src]="casa.imagen || 'https://img.freepik.com/vector-premium/cuidado-animales-hogar-emblema-refugio-animales-adopcion-o-pancarta-diseno-logotipo_125133-2655.jpg'" [alt]="casa.shelterName" />
+                <div class="casa-overlay"></div>
+            </div>
+            <div class="casa-content">
+                <h3>{{ casa.nombre }}</h3>
+                <p class="casa-descripcion">{{ casa.descripcion }}</p>
+                <button class="casa-btn">Ver detalles</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="register-as">
+        <div class="register-content">
+            <img src="https://cdn-icons-png.flaticon.com/512/3063/3063193.png" alt="Registro de hogar">
+            <div class="register-text">
+                <h2>Forma parte de nuestra comunidad</h2>
+                <p>Si administras un hogar de adopción y deseas ayudar a más mascotas a encontrar un hogar amoroso,
+                    únete a nosotros y publica tu información.</p>
+                <button [routerLink]="'/register-shelter'">Registrarse ahora</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,142 @@
+/* Estilos generales del contenedor */
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: -70vh;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+.login-container h1 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Grupos de formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Estilos para inputs */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+  border-color: #555;
+  box-shadow: 0 0 0 2px rgba(85, 85, 85, 0.1);
+}
+
+/* Estilos para inputs inválidos */
+.login-container input.invalid {
+  border-color: #e74c3c;
+}
+
+.login-container input.invalid:focus {
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.1);
+}
+
+/* Mensajes de error */
+.error-message {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Botón de login */
+.register-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.register-button:hover:not(:disabled) {
+  background-color: #222;
+}
+
+.register-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* Spinner de carga */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Botón de registro */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 15px;
+}
+
+.login-button:hover {
+  background-color: #f8f9fa;
+  border-color: #999;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  .login-container {
+    margin-top: 5vh;
+    padding: 20px;
+  }
+
+  .login-container h1 {
+    font-size: 24px;
+  }
+
+  .register-button,
+  .login-button {
+    padding: 12px;
+  }
+}

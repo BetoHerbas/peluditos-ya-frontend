@@ -8,7 +8,7 @@ import { environment } from '../../environments/environment';
 })
 export class AuthShelterService {
   private apiUrl = `${environment.apiBaseUrl}/auth`;
-  private apiUrl2 = `${environment.apiBaseUrl}/shelters`;
+  private apiUrl2 = `${environment.apiBaseUrl}/shelter-requests`;
   private shelterRequestUrl = `${environment.apiBaseUrl}/shelter-requests`;
 
   constructor(private http: HttpClient) {}
@@ -47,5 +47,9 @@ export class AuthShelterService {
 
   deleteShelter(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl2}/${id}`);
+  }
+
+  getShelterById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl2}/${id}`);
   }
 }

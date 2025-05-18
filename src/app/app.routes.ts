@@ -7,6 +7,8 @@ import { RegisterShelterComponent } from './components/register-shelter/register
 import { AdminSheltersComponent } from './pages/admin-page/admin-page.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterAnimalComponent } from './components/register-animal/register-animal.component';
+import { ShelterProfileComponent } from './pages/shelter-profile/shelter-profile.component';
+import { PetProfileComponent } from './pages/pet-profile/pet-profile.component';
 
 export const routes: Routes = [
     {
@@ -48,6 +50,16 @@ export const routes: Routes = [
         path: 'register-animal',
         component: RegisterAnimalComponent,
         title: 'Register Animal'       
+    },
+    {
+        path: 'shelter-profile/:id',
+        component: ShelterProfileComponent,
+        title: 'Pagina de perfil de refugio'
+    },
+    { 
+        path: 'animal-profile/:id',
+        component: PetProfileComponent,
+        title: 'Pagina de perfil de los animales'
     },
     { 
         path: '**', 

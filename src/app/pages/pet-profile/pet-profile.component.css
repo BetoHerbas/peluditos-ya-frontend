@@ -1,0 +1,75 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.pet-photo {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.profile-details {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.profile-details h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+.profile-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.medical-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.shelter-info {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.shelter-info h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.shelter-info p {
+  margin: 0.4rem 0;
+  color: #555;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
